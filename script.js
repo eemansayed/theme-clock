@@ -50,7 +50,17 @@ function setTime() {
   const minutes = time.getMinutes();
   const seconds = time.getSeconds();
 
-  hourEl.style.transform = `translate(-50%, -100%) rotate()`;
+  hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(
+    hoursForClock,
+    0,
+    11,
+    0,
+    360
+  )}deg)`;
+}
+
+function scale(number, inMin, inMax, outMin, outMax) {
+  return ((number - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 }
 
 setTime();
