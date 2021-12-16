@@ -9,6 +9,11 @@
   --secondary-color: #fff;
 }
 
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #333;
+}
+
 body {
   font-family: 'Heebo', sans-serif;
   display: flex;
