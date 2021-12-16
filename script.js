@@ -57,7 +57,22 @@ function setTime() {
     0,
     360
   )}deg)`;
-}
+
+minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(
+  minutes,
+  0,
+  59,
+  0,
+  360
+)}deg)`;
+
+secondEl.style.transform = `translate(-50%, -100%) rotate(${scale(
+  seconds,
+  0,
+  59,
+  0,
+  360
+)}deg)`;
 
 function scale(number, inMin, inMax, outMin, outMax) {
   return ((number - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
